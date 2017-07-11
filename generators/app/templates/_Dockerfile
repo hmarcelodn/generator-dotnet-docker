@@ -1,4 +1,4 @@
-FROM microsoft/dotnet
+FROM <%= build_image %>
 ARG source
 RUN echo "source: $source"
 WORKDIR /app

@@ -24,7 +24,8 @@ module.exports = class extends Generator {
         {
             type: 'input',
             name: 'endPoint',
-            message: 'Which is the endpoint to test service availability ?'
+            message: 'Which is the endpoint to test service availability ?',
+            store: true
         },
         {
             type: 'input',
@@ -35,6 +36,18 @@ module.exports = class extends Generator {
             type: 'input',
             name: 'serviceName',
             message: 'What is the service name ?'
+        },
+        {
+            type: 'input',
+            name: 'buildSdkImage',
+            message: 'What is the SDK docker image for build ?',
+            default: 'microsoft/dotnet:1.1.2-sdk'
+        },
+        {
+            type: 'input',
+            name: 'buildImage',
+            message: 'What is the Optimized docker image for execution ?',
+            default: 'microsoft/dotnet'
         }];          
 
         return this.prompt(prompts).then(props => {
@@ -43,6 +56,8 @@ module.exports = class extends Generator {
             this.endPoint = props.endPoint;        
             this.projectName = props.projectName;
             this.serviceName = props.serviceName;
+            this.buildSdkImage  = props.buildSdkImage;
+            this.buildImage = props.buildImage;
         });              
     }
 
@@ -52,7 +67,9 @@ module.exports = class extends Generator {
             end_point: this.endPoint,
             image_name: this.imageName,
             project_name: this.projectName,
-            service_name: this.serviceName
+            service_name: this.serviceName,
+            sdk_image: this.buildSdkImage,
+            build_image: this.buildImage
         };
 
         this.fs.copyTpl(
