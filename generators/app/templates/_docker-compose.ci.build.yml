@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  ci-build:
+    image: microsoft/dotnet:1.1.2-sdk
+    container_name: build
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: /bin/bash -c "dotnet restore ./<%= project_name %>.csproj && dotnet publish ./<%= project_name %>.csproj -c Release -o ./build"

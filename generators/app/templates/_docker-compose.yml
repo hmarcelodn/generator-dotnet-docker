@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  <%= service_name %>:
+    image: <%= image_name %>
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        source: ./build
+    ports:
+      - "5000:5000"

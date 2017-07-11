@@ -1,0 +1,8 @@
+FROM microsoft/dotnet
+ARG source
+RUN echo "source: $source"
+WORKDIR /app
+ENV ASPNETCORE_URLS http://*:<%= port_number %>
+EXPOSE <%= port_number %>
+COPY ${source:-/build} .
+ENTRYPOINT ["dotnet", "<%= project_name %>.dll"]

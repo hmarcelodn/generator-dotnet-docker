@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Hugo Marcelo Del Negro",
+      "authorEmail": "hmdelnegro@gmail.com",
+      "authorUrl": "https://github.com/hmarcelodn"
+    }
+  }
+}
