@@ -9,4 +9,4 @@ services:
       args:
         source: ./build
     ports:
-      - "5000:5000"
+      - "<%= port_number %>:<%= port_number %>"

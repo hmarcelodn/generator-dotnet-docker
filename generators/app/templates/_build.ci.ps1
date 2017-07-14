@@ -8,7 +8,7 @@ Param(
 )
 
 # Project Mutable Variables
-$publicPort="<%= port_number %>";
+$publicPort=<%= port_number %>;
 $url="http://localhost:$publicPort/<%= end_point %>";
 $dockerComposeCiFile = "docker-compose.ci.build.yml";
 $dockerComposeFile = "docker-compose.yml";

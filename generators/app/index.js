@@ -24,13 +24,13 @@ module.exports = class extends Generator {
         {
             type: 'input',
             name: 'endPoint',
-            message: 'Which is the endpoint to test service availability ?',
+            message: 'Which is the endpoint to test service availability (use a relative path) ?',
             store: true
         },
         {
             type: 'input',
             name: 'projectName',
-            message: 'What is the project name (.csproj file) ?'
+            message: 'What is the project name (dont add .csproj extensions) ?'
         },
         {
             type: 'input',
