@@ -1,6 +1,6 @@
 {
   "name": "generator-dotnet-docker",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Create Docker CLI for Inner Loop Development Lifecycle",
   "homepage": "",
   "author": {
