@@ -10,10 +10,10 @@ Param(
 # Project Mutable Variables
 $publicPort=<%= port_number %>;
 $url="http://localhost:$publicPort/<%= end_point %>";
-$dockerComposeCiFile = "docker-compose.ci.build.yml";
-$dockerComposeFile = "docker-compose.yml";
-$sdkBuildImageName = "microsoft/dotnet:1.1.2-sdk";
-$imageName = "<%= image_name %>";
+$dockerComposeCiFile="docker-compose.ci.build.yml";
+$dockerComposeFile="docker-compose.yml";
+$sdkBuildImageName="<%= sdk_image %>";
+$imageName="<%= image_name %>";
 
 # Utilize Linux Image to produce Release Build
 function BuildCI(){

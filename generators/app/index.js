@@ -24,7 +24,7 @@ module.exports = class extends Generator {
         {
             type: 'input',
             name: 'endPoint',
-            message: 'Which is the endpoint to test service availability (use a relative path) ?',
+            message: 'Which is the endpoint to test service availability (use a relative path like test/value) ?',
             store: true
         },
         {

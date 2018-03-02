@@ -2,12 +2,12 @@
 
 # Project Mutable Variables
 publicPort=<%= port_number %>
-url="http://localhost:$publicPort/api/city"
+url="http://localhost:$publicPort/<%= end_point %>"
 dockerComposeCiFile="docker-compose.ci.build.yml"
 dockerComposeFile="docker-compose.yml"
-sdkBuildImageName="microsoft/dotnet:1.1.2-sdk"
+sdkBuildImageName="<%= sdk_image %>"
 BBlue="\033[1;36m"
-imageName = "<%= image_name %>"
+imageName="<%= image_name %>"
 
 # Utilize Linux Image to produce Release Build
 buildCI () {
