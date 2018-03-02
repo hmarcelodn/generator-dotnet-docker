@@ -37,7 +37,7 @@ compose () {
 cleanBuild () {
     printf "$BBlue Cleaning Build Image and Containers"
     docker-compose -f $dockerComposeFile down
-    docker rm -f $imageName
+    docker rmi -f $imageName
     printf "$BBlue Cleaned environment"
 }
 
