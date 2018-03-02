@@ -47,7 +47,7 @@ module.exports = class extends Generator {
             type: 'input',
             name: 'buildImage',
             message: 'What is the Optimized docker image for execution ?',
-            default: 'microsoft/dotnet'
+            default: 'microsoft/aspnetcore:2.0'
         }];          
 
         return this.prompt(prompts).then(props => {
